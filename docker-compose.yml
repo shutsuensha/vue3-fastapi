@@ -1,0 +1,21 @@
+services:
+  fastapi-app:
+    image: fastapi-image-tasks-api
+    container_name: fastapi_container
+    env_file:
+      - .env
+    networks:
+      - tasks-network
+
+  vuejs-app:
+    image: vuejs-image-tasks
+    container_name: vuejs_container
+    ports:
+      - "80:80"
+    networks:
+      - tasks-network
+  
+
+networks:
+  tasks-network:
+    external: true
