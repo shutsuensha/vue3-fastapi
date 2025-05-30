@@ -12,6 +12,7 @@
 - Docker
 - Nginx
 - Vue3
+- Tailwind CSS
 
 
 ### Настройка в Docker
